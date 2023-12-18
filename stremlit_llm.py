@@ -61,6 +61,7 @@ genai.configure(api_key=llm_api_key)
 model = genai.GenerativeModel(model_name = "gemini-pro")
 
 st.write("Made with ❤️ by [Amogh Mahadev kokari](https://padlet.com/amoghkokari/my-portfolio-pmedtgib3l3qk1ma/wish/2605601586) ©️ 2024 _||_[linkedin](https://www.linkedin.com/in/amoghkokari/) _||_[Portfolio](https://padlet.com/amoghkokari/my-portfolio-pmedtgib3l3qk1ma)")
+st.write("Please leave feedback")
 
 # Show stuff to the screen if there's a prompt
 try:
@@ -72,8 +73,8 @@ except Exception as error:
 
 collector = FeedbackCollector(
     project="food recipe",
-    email=st.secrets.TRUBRICS_EMAIL,
-    password=st.secrets.TRUBRICS_PASSWORD,
+    email=st.secrets["TRUBRICS_EMAI"]L,
+    password=st.secrets["TRUBRICS_PASSWORD"],
 )
 
 collector.st_feedback(
