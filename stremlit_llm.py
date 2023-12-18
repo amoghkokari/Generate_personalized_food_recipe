@@ -5,10 +5,11 @@ import streamlit as st
 import google.generativeai as genai
 
 # App framework
+# st.write("[linkedin](https://www.linkedin.com/in/amoghkokari/) _||_ [Github](https://github.com/amoghkokari) _||_ [Portfolio](https://padlet.com/amoghkokari/portfolio])")
 st.title('🍲 Get Food Recipe')
 st.subheader('Get Food Recipe based on Grocery, Time Required, Cuisines and Equipment available (all inputs are optional)')
 api_key =  st.text_input('Enter Google Generative AI API KEY (Required)')
-st.link_button("Click for Api key (select create api key in new project)", "https://makersuite.google.com/app/apikey", type="secondary")
+st.link_button("Click for API KEY (select create api key in new project)", "https://makersuite.google.com/app/apikey", type="secondary")
 food = st.text_input('Particular Food in Mind (Dal Tadka)')
 grocery = st.text_input('Grocery (onion, garam masala)')
 time = st.text_input('Cooking Time (1 hr, 30 mins)')
@@ -58,6 +59,16 @@ use the following format in seperate lines
 llm_api_key = api_key if api_key else llm_key
 genai.configure(api_key=llm_api_key)
 model = genai.GenerativeModel(model_name = "gemini-pro")
+
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+
+st.write("Made with ❤️ by [Amogh Mahadev kokari](https://padlet.com/amoghkokari/my-portfolio-pmedtgib3l3qk1ma/wish/2605601586) ©️ 2024 _||_[linkedin](https://www.linkedin.com/in/amoghkokari/) _||_[Portfolio](https://padlet.com/amoghkokari/portfolio])")
 
 # Show stuff to the screen if there's a prompt
 try:
