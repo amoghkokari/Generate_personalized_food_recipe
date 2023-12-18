@@ -61,7 +61,6 @@ genai.configure(api_key=llm_api_key)
 model = genai.GenerativeModel(model_name = "gemini-pro")
 
 st.write("Made with ❤️ by [Amogh Mahadev kokari](https://padlet.com/amoghkokari/my-portfolio-pmedtgib3l3qk1ma/wish/2605601586) ©️ 2024 _||_[linkedin](https://www.linkedin.com/in/amoghkokari/) _||_[Portfolio](https://padlet.com/amoghkokari/my-portfolio-pmedtgib3l3qk1ma)")
-st.write("Please leave feedback")
 
 collector = FeedbackCollector(
     project="food recipe",
@@ -79,7 +78,7 @@ try:
             feedback_type="thumbs",
             open_feedback_label="[Optional] Provide additional feedback",
             model="gemeni",
-            prompt_id=prompt,
-)
+            prompt_id=prompt,)
+        st.write("Please leave feedback")
 except Exception as error:
     st.write("Please check your Api key, probable issue", SystemExit(error))
