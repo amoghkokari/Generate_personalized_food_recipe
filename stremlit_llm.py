@@ -63,7 +63,7 @@ model = genai.GenerativeModel(model_name = "gemini-pro")
 st.write("Made with ❤️ by [Amogh Mahadev kokari](https://padlet.com/amoghkokari/my-portfolio-pmedtgib3l3qk1ma/wish/2605601586) ©️ 2024 _||_[linkedin](https://www.linkedin.com/in/amoghkokari/) _||_[Portfolio](https://padlet.com/amoghkokari/my-portfolio-pmedtgib3l3qk1ma) _||_[Github](https://github.com/amoghkokari)")
 
 collector = FeedbackCollector(
-    project="food_recipe",
+    project="default",
     email=st.secrets["TRUBRICS_EMAIL"],
     password=st.secrets["TRUBRICS_PASSWORD"],
 )
