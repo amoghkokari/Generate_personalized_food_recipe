@@ -73,12 +73,12 @@ try:
     if prompt_enter:
         response = model.generate_content(prompt)
         st.write(response.text)
+        st.write("Please leave feedback")
         collector.st_feedback(
             component="default",
             feedback_type="thumbs",
             open_feedback_label="[Optional] Provide additional feedback",
             model="gemeni",
             prompt_id=prompt,)
-        st.write("Please leave feedback")
 except Exception as error:
     st.write("Please check your Api key, probable issue", SystemExit(error))
