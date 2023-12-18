@@ -1,5 +1,6 @@
 # Bring in deps
 from api_key import llm_key
+from trubrics.integrations.streamlit import FeedbackCollector
 
 import streamlit as st
 import google.generativeai as genai
@@ -68,3 +69,17 @@ try:
         st.write(response.text)
 except Exception as error:
     st.write("Please check your Api key, probable issue", SystemExit(error))
+
+collector = FeedbackCollector(
+    project="food recipe",
+    email=st.secrets.TRUBRICS_EMAIL,
+    password=st.secrets.TRUBRICS_PASSWORD,
+)
+
+collector.st_feedback(
+    component="food recipe",
+    feedback_type="thumbs",
+    open_feedback_label="[Optional] Provide additional feedback",
+    model="gemeni",
+    prompt_id=prompt,
+)
