@@ -74,7 +74,7 @@ try:
         response = model.generate_content(prompt)
         st.write(response.text)
         collector.st_feedback(
-            component="food recipe",
+            component="default",
             feedback_type="thumbs",
             open_feedback_label="[Optional] Provide additional feedback",
             model="gemeni",
