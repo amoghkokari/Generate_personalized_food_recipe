@@ -60,13 +60,13 @@ llm_api_key = api_key if api_key else llm_key
 genai.configure(api_key=llm_api_key)
 model = genai.GenerativeModel(model_name = "gemini-pro")
 
-hide_streamlit_style = """
-            <style>
-            #MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
-            </style>
-            """
-st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+# hide_streamlit_style = """
+#             <style>
+#             #MainMenu {visibility: hidden;}
+#             footer {visibility: hidden;}
+#             </style>
+#             """
+# st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 
 st.write("Made with ❤️ by [Amogh Mahadev kokari](https://padlet.com/amoghkokari/my-portfolio-pmedtgib3l3qk1ma/wish/2605601586) ©️ 2024 _||_[linkedin](https://www.linkedin.com/in/amoghkokari/) _||_[Portfolio](https://padlet.com/amoghkokari/portfolio])")
 
