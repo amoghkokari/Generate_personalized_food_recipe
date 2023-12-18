@@ -73,7 +73,7 @@ except Exception as error:
 
 collector = FeedbackCollector(
     project="food recipe",
-    email=st.secrets["TRUBRICS_EMAI"]L,
+    email=st.secrets["TRUBRICS_EMAI"],
     password=st.secrets["TRUBRICS_PASSWORD"],
 )
 
