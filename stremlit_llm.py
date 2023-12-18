@@ -5,17 +5,17 @@ import streamlit as st
 import google.generativeai as genai
 
 # App framework
-st.title('🦜 Get Food Recipe')
-st.subheader('Get Food Recipe based on Grocery, Time Required, Cuisines and Equipment avaialable (all inputs are optional)')
+st.title('🍲 Get Food Recipe')
+st.subheader('Get Food Recipe based on Grocery, Time Required, Cuisines and Equipment available (all inputs are optional)')
 api_key =  st.text_input('Enter Google Generative AI API KEY (Required)')
-st.link_button("Click for Api key and (select create api key in new project)", "https://makersuite.google.com/app/apikey", type="secondary")
+st.link_button("Click for Api key (select create api key in new project)", "https://makersuite.google.com/app/apikey", type="secondary")
 food = st.text_input('Particular Food in Mind (Dal Tadka)')
 grocery = st.text_input('Grocery (onion, garam masala)')
 time = st.text_input('Cooking Time (1 hr, 30 mins)')
 cusine = st.text_input('Cuisine (Italian, South-Indian)')
 equipment = st.text_input('Equipment used (frying pan, spatula)')
 meal = st.text_input('Meal (breakfast, brunch)')
-preference = st.text_input('Preference (vegen, no meat)')
+preference = st.text_input('Preference (vegan, no meat)')
 allergies = st.text_input('Allergies')
 extra = st.text_input('Additional information/requests')
 
