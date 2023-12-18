@@ -63,24 +63,23 @@ model = genai.GenerativeModel(model_name = "gemini-pro")
 st.write("Made with ❤️ by [Amogh Mahadev kokari](https://padlet.com/amoghkokari/my-portfolio-pmedtgib3l3qk1ma/wish/2605601586) ©️ 2024 _||_[linkedin](https://www.linkedin.com/in/amoghkokari/) _||_[Portfolio](https://padlet.com/amoghkokari/my-portfolio-pmedtgib3l3qk1ma)")
 st.write("Please leave feedback")
 
-# Show stuff to the screen if there's a prompt
-try:
-    if prompt_enter:
-        response = model.generate_content(prompt)
-        st.write(response.text)
-except Exception as error:
-    st.write("Please check your Api key, probable issue", SystemExit(error))
-
 collector = FeedbackCollector(
     project="food recipe",
     email=st.secrets["TRUBRICS_EMAIL"],
     password=st.secrets["TRUBRICS_PASSWORD"],
 )
 
-collector.st_feedback(
-    component="food recipe",
-    feedback_type="thumbs",
-    open_feedback_label="[Optional] Provide additional feedback",
-    model="gemeni",
-    prompt_id=prompt,
+# Show stuff to the screen if there's a prompt
+try:
+    if prompt_enter:
+        response = model.generate_content(prompt)
+        st.write(response.text)
+        collector.st_feedback(
+            component="food recipe",
+            feedback_type="thumbs",
+            open_feedback_label="[Optional] Provide additional feedback",
+            model="gemeni",
+            prompt_id=prompt,
 )
+except Exception as error:
+    st.write("Please check your Api key, probable issue", SystemExit(error))
