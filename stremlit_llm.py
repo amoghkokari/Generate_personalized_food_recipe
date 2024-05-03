@@ -45,7 +45,7 @@ preference:{meal} ,
 meal:{meal} ,
 allergies:{allergies} ,
 extra instructions:{extra} ,
-If present you should use this image to understand what user wants : {food_image},
+Use this image to extract information about recipe, food, utensils etc from this image : {food_image},
 If either of the instruction is not present use the best of your jusdgement to assume it, use polite language and step by step instructions simple enough for a layperson to understand it'
 
 Your response should always be in seperate lines in this format - 
