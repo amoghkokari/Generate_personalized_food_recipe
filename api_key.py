@@ -1,3 +1,3 @@
-llm_key = "AIzaSyCCsG6XYEqkTE04PJuvyNcHPR6Chi8dIBA"
-TRUBRICS_EMAIL = "amoghsrcm@gmail.com"
-TRUBRICS_PASSWORD = "amogh123"
+llm_key = ""
+TRUBRICS_EMAIL = ""
+TRUBRICS_PASSWORD = ""
