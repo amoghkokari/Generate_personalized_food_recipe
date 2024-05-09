@@ -1,4 +1,3 @@
 google-generativeai
-trubrics[streamlit]
-trubrics
+firebase_admin
 Pillow
