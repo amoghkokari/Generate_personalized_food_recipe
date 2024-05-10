@@ -1,3 +1,0 @@
-llm_key = ""
-TRUBRICS_EMAIL = ""
-TRUBRICS_PASSWORD = ""
