@@ -8,7 +8,7 @@ def get_food_pref_inputs():
     food = st.text_input('Particular Food in Mind (Dal Tadka, cake)')
     grocery = st.text_input('Grocery (onion, garam masala)')
     time = st.text_input('Cooking Time (1 hr, 30 mins)')
-    cusine = st.text_input('Cuisine (Italian, South-Indian)')
+    cuisine = st.text_input('Cuisine (Italian, South-Indian)')
     equipment = st.text_input('Equipment used (frying pan, spatula)')
     meal = st.text_input('Meal (breakfast, brunch)')
     preference = st.text_input('Preference (vegan, no meat)')
@@ -20,4 +20,4 @@ def get_food_pref_inputs():
     
     prompt_enter = st.button("Recipe")
     
-    return food, grocery, time, cusine, equipment, meal, allergies, extra, food_image, prompt_enter
+    return food, grocery, time, cuisine, equipment, meal, allergies, extra, food_image, preference, prompt_enter

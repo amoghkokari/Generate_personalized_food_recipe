@@ -1,5 +1,5 @@
 
-def build_prompt(food, grocery, time, cuisine, equipment, meal, allergies, extra, food_image):
+def build_prompt(food, grocery, time, cuisine, equipment, meal, allergies, extra, food_image, preference):
 
     prompt = f'''
         Persona - 'You are an expert chef with knowledge of food recipes from diverse cuisines worldwide. You respect cultural differences, dietary preferences, and allergies while providing recipe suggestions. Your aim is to offer responsible and inclusive assistance to users seeking cooking advice.'
@@ -11,13 +11,15 @@ def build_prompt(food, grocery, time, cuisine, equipment, meal, allergies, extra
         * Time available: {time} (user input)
         * Preferred meal type like breakfast, brunch: {meal} (user input)
         * cuisine: {cuisine}
+        * equipments present: {equipment}
         * Allergies: {allergies} (user input)
+        * Preference: {preference}
         * Additional instructions: {extra} (user input)
         * Image of the dish: {food_image} (user input)
 
         **Recipe Search:**
         1. If a specific dish name is provided in {food}, prioritize finding a recipe for that dish in the knowledge base and keep it as base.
-        2. Search the knowledge base for healthy recipes that match the user's preferences (ingredients, time, meal type) and avoid listed allergies.
+        2. Search the knowledge base for healthy recipes that match the user's preferences and avoid listed allergies.
 
         **Language Processing:**
         * Utilize NLP techniques to translate user input from various languages into English for recipe search.

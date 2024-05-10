@@ -13,8 +13,8 @@ def main():
     api_key =  st.text_input('Enter Google Generative AI API KEY (Required)')
     st.link_button("Click for API KEY (select create api key in new project)", "https://makersuite.google.com/app/apikey", type="secondary")
 
-    food, grocery, time, cusine, equipment, meal, allergies, extra, food_image, prompt_enter = get_food_pref_inputs()
-    prompt = build_prompt(food, grocery, time, cusine, equipment, meal, allergies, extra, food_image)
+    food, grocery, time, cuisine, equipment, meal, allergies, extra, food_image, preference, prompt_enter = get_food_pref_inputs()
+    prompt = build_prompt(food, grocery, time, cuisine, equipment, meal, allergies, extra, food_image, preference)
 
     # Llms
     llm_api_key = api_key if api_key else st.secrets["api_key"]
@@ -28,7 +28,7 @@ def main():
         if prompt_enter:
             response = model.generate_content(prompt)
             st.write(response.text)
-            u_inputs = build_user_input(food, grocery, time, cusine, equipment, meal, allergies, extra)
+            u_inputs = build_user_input(food, grocery, time, cuisine, equipment, meal, allergies, extra, preference)
             get_feedback(u_inputs, response.text)            
 
     except Exception as error:

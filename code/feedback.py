@@ -5,16 +5,17 @@ if not _apps:
     cred = credentials.Certificate(dict(st.secrets['profile']))
     initialize_app(cred)
 
-def build_user_input(food, grocery, time, cusine, equipment, meal, allergies, extra):
+def build_user_input(food, grocery, time, cuisine, equipment, meal, allergies, extra, preference):
     dct_inputs = {
         "food" : food, 
         "grocery" : grocery, 
         "time" : time, 
-        "cusine" : cusine, 
+        "cusine" : cuisine, 
         "equipment" : equipment, 
         "meal" : meal, 
         "allergies" : allergies, 
-        "extra" : extra
+        "extra" : extra,
+        "preference" : preference
     }
     return dct_inputs
 
